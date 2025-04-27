@@ -53,12 +53,14 @@ body {
   gap: 10px;
   align-items: center;
 }
-.mylearning{
+
+.mylearning {
   position: relative;
   cursor: pointer;
 }
+
 /* my learning */
-.mylearning__popup{
+.mylearning__popup {
   position: absolute;
   background-color: white;
   border: solid black 1px;
@@ -68,8 +70,9 @@ body {
   right: 0%;
   display: none;
 }
-.mylearning:hover .mylearning__popup{
-  display:block
+
+.mylearning:hover .mylearning__popup {
+  display: block
 }
 
 .categories {
@@ -84,22 +87,51 @@ body {
   padding: 10px;
   color: white;
   border-radius: 20px;
+  cursor: pointer;
+  border: solid RGB(164, 53, 240) 1px;
 }
-.sales__image{
+
+.categories p:hover {
+  transition: 0.5s;
+  background-color: transparent;
+  color: RGB(164, 53, 240);
+  border: solid RGB(164, 53, 240) 1px;
+}
+
+.sales__image {
   position: relative;
 }
-.sales__image img{
+
+.sales__image img {
   width: 100%;
 }
-.sales__image-offer{
+
+.sales__image-offer {
   position: absolute;
   border: solid black 2px;
-  width: 35%;
+  width: 30%;
   background-color: white;
   top: 50px;
-  left: 10px;
-  padding: 10px;
+  left: 50px;
+  padding: 25px;
+  animation-name: zoom;
+  animation-duration: 3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .recommended {
   padding: 10px;
 }
@@ -149,21 +181,24 @@ body {
   justify-content: space-between;
   margin-top: 10px;
 }
-.footer{
+
+.footer {
   padding: 30px;
   background-color: black;
   color: white;
 }
 
-.footer_one{
+.footer_one {
   display: flex;
-  gap:10px;
+  gap: 10px;
 }
-.footer_one p{
+
+.footer_one p {
   margin: 20px;
 
 }
-.footer_two{
+
+.footer_two {
   display: flex;
   justify-content: space-between;
   margin: 20px;
